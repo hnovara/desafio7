@@ -47,7 +47,7 @@ function forClass() {
                     document.getElementById('destino').innerHTML = `${msg.repeat(10)}`;
                     break;
                 case 3:
-                    let n = prompt("¿Cuántas veces quieres agregar el texto?");
+                    let n = prompt("Elegí la cantidad de veces que se repita el texto");
                     if (n !== null) {
                         document.getElementById('destino').innerHTML = `${msg.repeat(parseInt(n))}`;
                     }
@@ -60,17 +60,28 @@ function forClass() {
 }
 forClass();
 
-// botonVaciar = document.querySelector(".btn-vaciar");
+// Ejercicio 6:
+let botonVaciar = document.querySelector(".btn-vaciar");
+botonVaciar.addEventListener("click", vaciar);
+function vaciar() {
+    document.getElementById("destino").innerHTML = "";
+}
 
-// botonVaciar.addEventListener("click", function()) {
-//     let contenidoDiv = document.getElementById("destino");
-//     contenidoDiv.innerHTML = "";
-// }
+let botonMayuscula = document.querySelector(".btn-convertir-a-mayusculas");
+botonMayuscula.addEventListener("click", mayuscula);
+function mayuscula() {
+    let contenidoMsg = document.getElementById("destino");
+    contenidoMsg.innerHTML = contenidoMsg.innerHTML.toUpperCase();
+}
 
+let botonMinuscula = document.querySelector("button");
+botonMinuscula.addEventListener("click", minuscula);
+function minuscula() {
+    let contenidoMsg = document.getElementById("destino");
+    contenidoMsg.innerHTML = contenidoMsg.innerHTML.toLowerCase();
+}
 
-
-
-
+// Ejercicio 7:
 
 
 
@@ -86,3 +97,4 @@ forClass();
 
 }
 );
+
