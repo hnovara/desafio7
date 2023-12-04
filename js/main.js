@@ -11,7 +11,7 @@ let bo = document.getElementsByTagName("button")[0];
 
 let click = document.getElementById('origen');
 
-click.addEventListener ("click", function(a){
+click.addEventListener ("input", function(a){
     habilitar(e,bo);
 })
 
