@@ -82,19 +82,15 @@ function minuscula() {
 }
 
 // Ejercicio 7:
+var listaItems = document.getElementsByTagName("li");
+
+for (var i = 0; i < listaItems.length; i++) {
+    var contenidoActual = listaItems[i].innerHTML;
+    listaItems[i].innerHTML = "[Ok]" + contenidoActual;
+  }
 
 
-
-
-
-
-
-
-
-
-
-
-
+  
 }
 );
 
