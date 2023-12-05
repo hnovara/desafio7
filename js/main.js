@@ -18,17 +18,16 @@ click.addEventListener ("input", function(a){
 
 function habilitar(e, bo) {
     for (let i = 0; i < e.length; i++) {
-        e[i].disabled =false
+        e[i].disabled =false;
     }
-    bo.disabled =false
+    bo.disabled =false;
 }
 
 // Ejercicio 5:
 let one = document.getElementById("btn-reemplazar");
 one.addEventListener("click", reemplazar); 
 function reemplazar() {
-    document.getElementById('destino').innerHTML =`${msg}`;
-    document.getElementById("origen").value = "";
+    document.getElementById('destino').innerHTML = document.getElementById("origen").value;
 }
 
 let arrayAgregar = document.getElementsByClassName("btn-agregar");
@@ -38,18 +37,18 @@ function forClass() {
         arrayAgregar[i].addEventListener("click", function(event) {
             switch (i) {
                 case 0:
-                    document.getElementById('destino').innerHTML = `${msg.repeat(1)}`;
+                    document.getElementById('destino').innerHTML += document.getElementById("origen").value;
                     break;
                 case 1:
-                    document.getElementById('destino').innerHTML = `${msg.repeat(5)}`;
+                    document.getElementById('destino').innerHTML += document.getElementById("origen").value.repeat(5);
                     break;
                 case 2:
-                    document.getElementById('destino').innerHTML = `${msg.repeat(10)}`;
+                    document.getElementById('destino').innerHTML += document.getElementById("origen").value.repeat(10);
                     break;
                 case 3:
                     let n = prompt("Elegí la cantidad de veces que se repita el texto");
                     if (n !== null) {
-                        document.getElementById('destino').innerHTML = `${msg.repeat(parseInt(n))}`;
+                        document.getElementById('destino').innerHTML += document.getElementById("origen").value.repeat(parseInt(n));
                     }
                     break;
                 default:
